@@ -1,0 +1,164 @@
+<mat-toolbar color="primary">
+    <span>RMS</span>
+</mat-toolbar>
+
+<mat-tab-group>
+  <mat-tab label="Search Rate"> 
+        <mat-grid-list cols="3">
+  <mat-grid-tile></mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card>
+  <mat-card-title>Fetch Rate details</mat-card-title>
+  <br>
+  <mat-card-content>
+  <form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Search ID</mat-label>
+    <input matInput [(ngModel)]="searchid" name="searchid" >
+    </mat-form-field>
+
+
+</form>
+</mat-card-content>
+ <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="searchRate()">Search</button>
+  </mat-card-actions>
+</mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile></mat-grid-tile>
+</mat-grid-list>
+   </mat-tab>
+  <mat-tab label="Add Rate"> 
+  <br>
+  <mat-grid-list cols="3">
+  <mat-grid-tile></mat-grid-tile>
+  <mat-grid-tile>
+  <mat-card>
+  <mat-card-title>Add Rate details</mat-card-title>
+  <br>
+  <mat-card-content>
+  <form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Rate ID</mat-label>
+    <input matInput [(ngModel)]="rateid" name="rateid" >
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Rate Description</mat-label>
+    <input matInput [(ngModel)]="ratedescription" name="ratedescription" >
+    </mat-form-field>
+    <br>
+
+     <mat-form-field appearance="fill">
+  <mat-label>Rate Effective Date</mat-label>
+  <input matInput [matDatepicker]="picker" [(ngModel)]="rateeffectivedate" name="rateeffectivedate">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<br>
+
+<mat-form-field appearance="fill">
+  <mat-label>Rate Expiration Date</mat-label>
+  <input matInput [matDatepicker]="picker" [(ngModel)]="rateexpirationdate" name="rateexpirationdate">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Amount</mat-label>
+    <input matInput [(ngModel)]="amount" name="amount" >
+    </mat-form-field>
+
+
+</form>
+</mat-card-content>
+ <mat-card-actions>
+    <button mat-raised-button color="primary">Add</button>
+  </mat-card-actions>
+</mat-card> 
+</mat-grid-tile>
+ <mat-grid-tile></mat-grid-tile>
+</mat-grid-list>
+ </mat-tab>
+
+
+  <mat-tab label="Update Rate"> <br>
+    <mat-grid-list cols="3">
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile>
+    <mat-card>
+    <mat-card-title>Update Rate details</mat-card-title>
+    <br>
+    <mat-card-content>
+    <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Rate ID</mat-label>
+      <input matInput [(ngModel)]="rateid" name="rateid" >
+      </mat-form-field>
+      <br>
+  
+      <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Rate Description</mat-label>
+      <input matInput [(ngModel)]="ratedescription" name="ratedescription" >
+      </mat-form-field>
+      <br>
+  
+       <mat-form-field appearance="fill">
+    <mat-label>Rate Effective Date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="rateeffectivedate" name="rateeffectivedate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <br>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Rate Expiration Date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="rateexpirationdate" name="rateexpirationdate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <br>
+  
+      <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Amount</mat-label>
+      <input matInput [(ngModel)]="amount" name="amount" >
+      </mat-form-field>
+  
+  
+  </form>
+  </mat-card-content>
+   <mat-card-actions>
+      <button mat-raised-button color="primary">Update</button>
+    </mat-card-actions>
+  </mat-card> 
+  </mat-grid-tile>
+   <mat-grid-tile></mat-grid-tile>
+  </mat-grid-list></mat-tab>
+  <mat-tab label="Delete Rate"> 
+    <mat-grid-list cols="3">
+      <mat-grid-tile></mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card>
+      <mat-card-title>Delete Rate details</mat-card-title>
+      <br>
+      <mat-card-content>
+      <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Delete ID</mat-label>
+        <input matInput [(ngModel)]="searchid" name="searchid" >
+        </mat-form-field>
+    
+    
+    </form>
+    </mat-card-content>
+     <mat-card-actions>
+        <button mat-raised-button color="primary">Delete</button>
+      </mat-card-actions>
+    </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile></mat-grid-tile>
+    </mat-grid-list>  
+  </mat-tab>
+</mat-tab-group>

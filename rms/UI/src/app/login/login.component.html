@@ -1,0 +1,30 @@
+<mat-grid-list cols="3">
+  <mat-grid-tile></mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card>
+  <mat-card-title>RMS Login</mat-card-title>
+  <br>
+  <mat-card-content>
+  <form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Username</mat-label>
+    <input matInput [(ngModel)]="username" name="username" >
+
+
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput [(ngModel)]="password" name="password" >
+
+  </mat-form-field>
+
+</form>
+</mat-card-content>
+ <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="authenticate()">Login</button>
+  </mat-card-actions>
+</mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile></mat-grid-tile>
+</mat-grid-list>
