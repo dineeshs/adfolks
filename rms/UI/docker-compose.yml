@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:
+  angular-service:
+    container_name: angular-docker-container
+    build: ./
+    ports: 
+      - "4201:4200"
+    command: >
+      bash -c "npm start"
+
+
+
+  nginx-service:
+    container_name: nginx-docker-container
+    build: ./
+    ports: 
+      - "80:80"
+    command: ["nginx", "-g", "daemon off;"]
+    links:
+      - angular-service
